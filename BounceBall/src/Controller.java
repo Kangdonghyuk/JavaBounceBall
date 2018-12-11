@@ -14,6 +14,7 @@ class BounceController {
         {
             delay(delayTime);
             ball.move(deltaTime);
+            ball.gravity(deltaTime);
             animationWriter.repaint();
         }
     }

@@ -22,12 +22,24 @@ class Ball
     public int getRadius() {
         return radius;
     }
+
+    //basic move
     public void move(int deltaTime) {
         xPosition = xPosition + xVelocity * deltaTime;
-        yPosition = yPosition + yVelocity * deltaTime;
 
         if(container.inHorizontalContact(xPosition))
             xVelocity = -xVelocity;
+    }
+
+    //key event move
+    public void move(int xVelocity, int deltaTime) {
+        xPosition = xPosition + xVelocity * deltaTime;
+
+        if(container.inHorizontalContact(xPosition))
+            xPosition = xPosition - xVelocity * deltaTime;
+    }
+    public void gravity(int deltaTime) {
+        yPosition = yPosition + yVelocity * deltaTime;
 
         if(container.inVerticalContact(yPosition))
             yVelocity = -20;
