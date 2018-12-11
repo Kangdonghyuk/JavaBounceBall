@@ -8,17 +8,18 @@ public class Main{
 
         ContainerWriter containerWriter = new ContainerWriter(container);
 
-        Ball ball = new Ball(20, 600, 8, container);
-        BallWriter ballWriter = new BallWriter(ball, Color.RED);
-
         FileManager fileManager = new FileManager();
         fileManager.readStage(1);
+
+        Ball ball = new Ball(200, 50, 8, container);
+        ball.setMap(fileManager.getMap());
+        BallWriter ballWriter = new BallWriter(ball, Color.RED);
 
         BlockWriter blockWriter = new BlockWriter(fileManager.getMap());
 
         AnimationWriter animationWriter = new AnimationWriter(
                 containerWriter, ballWriter, blockWriter,
-                1200, 800);
+                1200, 740);
 
         BounceController controller = new BounceController(ball, animationWriter);
 

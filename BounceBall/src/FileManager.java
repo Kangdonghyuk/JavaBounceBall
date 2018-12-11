@@ -9,8 +9,8 @@ class FileManager {
     public FileManager() {
         int yIndex, xIndex;
 
-        map = new int[35][];
-        for(yIndex = 0; yIndex < 35; yIndex++) {
+        map = new int[36][];
+        for(yIndex = 0; yIndex < 36; yIndex++) {
             map[yIndex] = new int[60];
             for(xIndex = 0; xIndex < 60; xIndex++)
                 map[yIndex][xIndex] = 0;

@@ -68,12 +68,12 @@ class BlockWriter {
     public BlockWriter(int [][]map) {
         int yIndex, xIndex;
 
-        blocks = new Block[35][];
-        for(yIndex = 0; yIndex < 35; yIndex++) {
+        blocks = new Block[36][];
+        for(yIndex = 0; yIndex < 36; yIndex++) {
             blocks[yIndex] = new Block[60];
             for(xIndex = 0; xIndex < 60; xIndex++) {
                 blocks[yIndex][xIndex] = new Block(
-                        xIndex * 20, yIndex * 20,
+                        xIndex * 20, (yIndex+0) * 20,
                         xIndex, yIndex, false);
                 if(map[yIndex][xIndex] != 0) {
                     blocks[yIndex][xIndex].setType(map[yIndex][xIndex]);
@@ -86,7 +86,7 @@ class BlockWriter {
     public void paint(Graphics g) {
         int yIndex, xIndex;
 
-        for(yIndex = 0; yIndex < 35; yIndex++) {
+        for(yIndex = 0; yIndex < 36; yIndex++) {
             for (xIndex = 0; xIndex < 60; xIndex++) {
                 if(blocks[yIndex][xIndex].isEnable()) {
                     Block block = blocks[yIndex][xIndex];
@@ -94,6 +94,7 @@ class BlockWriter {
                     g.fillRect(
                             block.getXPosition(), block.getYPosition(),
                             20, 20);
+                    g.setColor(Color.black);
                     g.drawRect(
                             block.getXPosition(), block.getYPosition(),
                             20, 20);

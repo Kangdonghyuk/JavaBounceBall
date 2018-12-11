@@ -5,6 +5,7 @@ class Ball
     private int xPosition, yPosition, radius;
     private int xVelocity = 7;
     private int yVelocity = 2;
+    private int[][] map;
     private Container container;
 
     public Ball(int xPosition, int yPosition, int radius, Container container) {
@@ -12,6 +13,9 @@ class Ball
         this.yPosition=yPosition;
         this.radius=radius;
         this.container=container;
+    }
+    public void setMap(int [][]map) {
+        this.map = map;
     }
     public int getXPosition() {
         return xPosition;
@@ -25,10 +29,18 @@ class Ball
 
     //basic move
     public void move(int deltaTime) {
+        int nowYPosition, nowXPosition;
+        int saveXPosition = xPosition;
+
         xPosition = xPosition + xVelocity * deltaTime;
 
-        if(container.inHorizontalContact(xPosition))
+        nowXPosition = xPosition / 20;
+        nowYPosition = yPosition / 20;
+
+        if(map[nowYPosition][nowXPosition] != 0) {
             xVelocity = -xVelocity;
+            xPosition = saveXPosition + xVelocity * deltaTime;
+        }
     }
 
     //key event move
@@ -39,12 +51,24 @@ class Ball
             xPosition = xPosition - xVelocity * deltaTime;
     }
     public void gravity(int deltaTime) {
+        int nowYPosition, nowXPosition;
+        int saveYPosition = yPosition;
+
         yPosition = yPosition + yVelocity * deltaTime;
 
-        if(container.inVerticalContact(yPosition))
-            yVelocity = -20;
+        nowXPosition = xPosition / 20;
+        nowYPosition = yPosition / 20;
 
-        yVelocity += 1;
+        if(map[nowYPosition][nowXPosition] != 0) {
+            if(yVelocity >= 0)
+                yVelocity = -15;
+            else
+                yVelocity = 3;
+            yPosition = saveYPosition + yVelocity * deltaTime;
+        }
+
+        if(yVelocity <= 15)
+            yVelocity += 1;
     }
 }
 
