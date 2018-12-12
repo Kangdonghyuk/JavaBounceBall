@@ -17,6 +17,9 @@ class GameRenderer extends JPanel
         my_frame.getContentPane().add(this);
         my_frame.setTitle("Bounce");
         my_frame.setSize(Information.I.screenWidth, Information.I.screenHeight);
+        //my_frame.setVisible(true);
+
+        my_frame.addKeyListener(new KeyManager());
         my_frame.setVisible(true);
     }
 

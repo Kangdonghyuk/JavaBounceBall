@@ -2,11 +2,14 @@ import java.awt.*;
 
 class Ball
 {
+    public static Ball I;
     private int xPosition, yPosition, radius;
-    private int xVelocity = 7;
+    private int xVelocity = 0;
     private int yVelocity = 2;
 
     public Ball(int xPosition, int yPosition, int radius) {
+        I = this;
+
         this.xPosition=xPosition;
         this.yPosition=yPosition;
         this.radius=radius;
@@ -19,6 +22,12 @@ class Ball
     }
     public int getRadius() {
         return radius;
+    }
+    public int getXVelocity() {
+        return xVelocity;
+    }
+    public int getyVelocity() {
+        return yVelocity;
     }
 
     //basic move
@@ -34,9 +43,13 @@ class Ball
         if(Information.I.isValidIndex(xIndex, yIndex)) {
             if (BlockController.I.isBlockEnable(xIndex, yIndex)) {
                 xVelocity = -xVelocity;
-                xPosition = saveXPosition + xVelocity * deltaTime;
+                xPosition = saveXPosition + xVelocity * deltaTime * 3;
+                //xVelocity = 0;
             }
         }
+    }
+    public void setXVelocity(int xVelocity) {
+        this.xVelocity = xVelocity;
     }
 
     public void gravity(int deltaTime) {
