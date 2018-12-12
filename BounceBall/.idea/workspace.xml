@@ -52,8 +52,8 @@
           <file leaf-file-name="Ball.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Ball.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="239">
-                  <caret line="43" column="38" lean-forward="true" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
+                <state relative-caret-position="314">
+                  <caret line="48" column="32" lean-forward="true" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
                   <folding>
                     <element signature="e#334#335#0" expanded="true" />
                     <element signature="e#366#367#0" expanded="true" />
@@ -291,12 +291,12 @@
       <updated>1544516531815</updated>
       <workItem from="1544516538550" duration="10184000" />
       <workItem from="1544538952790" duration="25000" />
-      <workItem from="1544539966490" duration="13061000" />
+      <workItem from="1544539966490" duration="13235000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23270000" />
+    <option name="totallyTimeSpent" value="23444000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -602,8 +602,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Ball.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="43" column="38" lean-forward="true" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
+        <state relative-caret-position="314">
+          <caret line="48" column="32" lean-forward="true" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
           <folding>
             <element signature="e#334#335#0" expanded="true" />
             <element signature="e#366#367#0" expanded="true" />
