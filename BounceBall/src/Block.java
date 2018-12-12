@@ -62,19 +62,30 @@ class Block {
     }
 }
 
-class BlockWriter {
+class BlockController {
+    public static BlockController I;
     private Block[][] blocks;
 
-    public BlockWriter(int [][]map) {
+    public BlockController() {
+        I = this;
+
         int yIndex, xIndex;
 
-        blocks = new Block[36][];
-        for(yIndex = 0; yIndex < 36; yIndex++) {
-            blocks[yIndex] = new Block[60];
-            for(xIndex = 0; xIndex < 60; xIndex++) {
+        blocks = new Block[Information.I.yMaxIndex][];
+        for(yIndex = 0; yIndex < Information.I.yMaxIndex; yIndex++) {
+            blocks[yIndex] = new Block[Information.I.xMaxIndex];
+            for(xIndex = 0; xIndex < Information.I.xMaxIndex; xIndex++) {
                 blocks[yIndex][xIndex] = new Block(
                         xIndex * 20, (yIndex+0) * 20,
                         xIndex, yIndex, false);
+            }
+        }
+    }
+    public void setMap(int [][] map) {
+        int yIndex, xIndex;
+
+        for(yIndex = 0; yIndex < Information.I.yMaxIndex; yIndex++) {
+            for (xIndex = 0; xIndex < Information.I.xMaxIndex; xIndex++) {
                 if(map[yIndex][xIndex] != 0) {
                     blocks[yIndex][xIndex].setType(map[yIndex][xIndex]);
                     blocks[yIndex][xIndex].setEnable(true);
@@ -82,14 +93,34 @@ class BlockWriter {
             }
         }
     }
+    public void setBlockType(int xIndex, int yIndex, int type) {
+        blocks[yIndex][xIndex].setType(type);
+    }
+    public void setBlockEnable(int xIndex, int yIndex, boolean enable) {
+        blocks[yIndex][xIndex].setEnable(enable);
+    }
+    public int getBlockType(int xIndex, int yIndex) {
+        return blocks[yIndex][xIndex].getType();
+    }
+    public boolean isBlockEnable(int xIndex, int yIndex) {
+        return blocks[yIndex][xIndex].isEnable();
+    }
+    public Block getBlock(int xIndex, int yIndex) {
+        return blocks[yIndex][xIndex];
+    }
+}
+
+class BlockRenderer implements ObjectRenderer {
+    public BlockRenderer() {
+    }
 
     public void paint(Graphics g) {
         int yIndex, xIndex;
 
-        for(yIndex = 0; yIndex < 36; yIndex++) {
-            for (xIndex = 0; xIndex < 60; xIndex++) {
-                if(blocks[yIndex][xIndex].isEnable()) {
-                    Block block = blocks[yIndex][xIndex];
+        for(yIndex = 0; yIndex < Information.I.yMaxIndex; yIndex++) {
+            for (xIndex = 0; xIndex < Information.I.xMaxIndex; xIndex++) {
+                if(BlockController.I.isBlockEnable(xIndex, yIndex)) {
+                    Block block = BlockController.I.getBlock(xIndex, yIndex);
                     g.setColor(block.getColor());
                     g.fillRect(
                             block.getXPosition(), block.getYPosition(),

@@ -20,11 +20,11 @@ class Container {
     }
 }
 
-class ContainerWriter
+class ContainerRenderer
 {
     private Container container;
 
-    public ContainerWriter(Container container) {
+    public ContainerRenderer(Container container) {
         this.container = container;
     }
 

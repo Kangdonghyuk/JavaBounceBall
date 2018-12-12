@@ -5,17 +5,11 @@ class Ball
     private int xPosition, yPosition, radius;
     private int xVelocity = 7;
     private int yVelocity = 2;
-    private int[][] map;
-    private Container container;
 
-    public Ball(int xPosition, int yPosition, int radius, Container container) {
+    public Ball(int xPosition, int yPosition, int radius) {
         this.xPosition=xPosition;
         this.yPosition=yPosition;
         this.radius=radius;
-        this.container=container;
-    }
-    public void setMap(int [][]map) {
-        this.map = map;
     }
     public int getXPosition() {
         return xPosition;
@@ -29,57 +23,56 @@ class Ball
 
     //basic move
     public void move(int deltaTime) {
-        int nowYPosition, nowXPosition;
+        int yIndex, xIndex;
         int saveXPosition = xPosition;
 
         xPosition = xPosition + xVelocity * deltaTime;
 
-        nowXPosition = xPosition / 20;
-        nowYPosition = yPosition / 20;
+        xIndex = xPosition / 20;
+        yIndex = yPosition / 20;
 
-        if(map[nowYPosition][nowXPosition] != 0) {
-            xVelocity = -xVelocity;
-            xPosition = saveXPosition + xVelocity * deltaTime;
+        if(Information.I.isValidIndex(xIndex, yIndex)) {
+            if (BlockController.I.isBlockEnable(xIndex, yIndex)) {
+                xVelocity = -xVelocity;
+                xPosition = saveXPosition + xVelocity * deltaTime;
+            }
         }
     }
 
-    //key event move
-    public void move(int xVelocity, int deltaTime) {
-        xPosition = xPosition + xVelocity * deltaTime;
-
-        if(container.inHorizontalContact(xPosition))
-            xPosition = xPosition - xVelocity * deltaTime;
-    }
     public void gravity(int deltaTime) {
-        int nowYPosition, nowXPosition;
+        int yIndex, xIndex;
         int saveYPosition = yPosition;
 
         yPosition = yPosition + yVelocity * deltaTime;
 
-        nowXPosition = xPosition / 20;
-        nowYPosition = yPosition / 20;
+        xIndex = xPosition / 20;
+        yIndex = yPosition / 20;
 
-        if(map[nowYPosition][nowXPosition] != 0) {
-            if(yVelocity >= 0)
-                yVelocity = -15;
-            else
-                yVelocity = 3;
-            yPosition = saveYPosition + yVelocity * deltaTime;
+        if(Information.I.isValidIndex(xIndex, yIndex)) {
+            if (BlockController.I.isBlockEnable(xIndex, yIndex)) {
+                if (yVelocity >= 0) {
+                    yVelocity = -15;
+                    //BlockController.I.setBlockEnable(xIndex, yIndex, false);
+                    //SoundManager.I.PlaySound("src/sound/Jump.wav");
+                } else
+                    yVelocity = 3;
+                yPosition = saveYPosition + yVelocity * deltaTime;
+            }
+
+            if (yVelocity <= 15)
+                yVelocity += 1;
         }
-
-        if(yVelocity <= 15)
-            yVelocity += 1;
     }
 }
 
-class BallWriter
+class BallRenderer implements ObjectRenderer
 {
-    private Ball ball; // the (address of the) ball object displayed
-    private Color color; // the ball's color
+    private Ball ball;
+    private Color color;
 
-    public BallWriter(Ball ball, Color color) {
+    public BallRenderer(Ball ball) {
         this.ball = ball;
-        this.color = color;
+        this.color = Color.red;
     }
 
     public void paint(Graphics g) {

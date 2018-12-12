@@ -1,28 +1,34 @@
-import javax.swing.*;
-import java.awt.*;
 
 public class Main{
 
     public static void main(String[] args) {
-        Container container = new Container(1200, 700);
+        Information information = new Information();
+        information.setScreenSize(1200, 740);
+        information.setContainerSize(1200, 700);
+        information.setMaxIndex(60, 36);
 
-        ContainerWriter containerWriter = new ContainerWriter(container);
+        //SoundManager soundManager = new SoundManager();
+        //soundManager.I.PlaySound("src/sound/GameBGM.wav");
+
+        //Container container = new Container(
+          //      information.containerWidth, information.containerHeight);
+
+        //ContainerWriter containerWriter = new ContainerWriter(container);
 
         FileManager fileManager = new FileManager();
         fileManager.readStage(1);
 
-        Ball ball = new Ball(200, 50, 8, container);
-        ball.setMap(fileManager.getMap());
-        BallWriter ballWriter = new BallWriter(ball, Color.RED);
+        Ball ball = new Ball(200, 50, 8);
 
-        BlockWriter blockWriter = new BlockWriter(fileManager.getMap());
+        BlockController blockController = new BlockController();
+        blockController.setMap(fileManager.getMap());
 
-        AnimationWriter animationWriter = new AnimationWriter(
-                containerWriter, ballWriter, blockWriter,
-                1200, 740);
+        GameRenderer gRenderer = new GameRenderer();
+        gRenderer.addRenderer(new BlockRenderer());
+        gRenderer.addRenderer(new BallRenderer(ball));
 
-        BounceController controller = new BounceController(ball, animationWriter);
+        GameManager gameManager = new GameManager(ball, gRenderer);
 
-        controller.runAnimation();
+        gameManager.gameLoop();
     }
 }
