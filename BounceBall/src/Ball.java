@@ -7,9 +7,10 @@ class Ball
     private int xVelocity = 0;
     private int yVelocity = 2;
 
-    public Ball(int xPosition, int yPosition, int radius) {
+    public Ball() {
         I = this;
-
+    }
+    public void setInformation(int xPosition, int yPosition, int radius) {
         this.xPosition=xPosition;
         this.yPosition=yPosition;
         this.radius=radius;
@@ -34,17 +35,24 @@ class Ball
     public void move(int deltaTime) {
         int yIndex, xIndex;
         int saveXPosition = xPosition;
+        int blockSize = Information.I.blockSize;
+        int blockType;
 
         xPosition = xPosition + xVelocity * deltaTime;
 
-        xIndex = xPosition / 20;
-        yIndex = yPosition / 20;
+        xIndex = xPosition / blockSize;
+        yIndex = yPosition / blockSize;
 
         if(Information.I.isValidIndex(xIndex, yIndex)) {
             if (BlockController.I.isBlockEnable(xIndex, yIndex)) {
-                xVelocity = -xVelocity;
-                xPosition = saveXPosition + xVelocity * deltaTime * 3;
-                //xVelocity = 0;
+                blockType = BlockController.I.getBlockType(xIndex, yIndex);
+                if(blockType == 9)
+                    BlockController.I.setBlockEnable(xIndex, yIndex, false);
+                else {
+                    xVelocity = -xVelocity;
+                    xPosition = saveXPosition + xVelocity * deltaTime;
+                    xVelocity = 0;
+                }
             }
         }
     }
@@ -55,16 +63,26 @@ class Ball
     public void gravity(int deltaTime) {
         int yIndex, xIndex;
         int saveYPosition = yPosition;
+        int blockSize = Information.I.blockSize;
+        int blockType;
 
         yPosition = yPosition + yVelocity * deltaTime;
 
-        xIndex = xPosition / 20;
-        yIndex = yPosition / 20;
+        xIndex = xPosition / blockSize;
+        yIndex = yPosition / blockSize;
 
         if(Information.I.isValidIndex(xIndex, yIndex)) {
             if (BlockController.I.isBlockEnable(xIndex, yIndex)) {
-                if (yVelocity >= 0) {
-                    yVelocity = -15;
+                blockType = BlockController.I.getBlockType(xIndex, yIndex);
+                if(blockType == 9)
+                    BlockController.I.setBlockEnable(xIndex, yIndex, false);
+                else if (yVelocity >= 0) {
+                    yVelocity = -14;
+
+                    if(blockType == 2)
+                        BlockController.I.setBlockEnable(xIndex, yIndex, false);
+                    else if(blockType == 3)
+                        yVelocity = -18;
                     //BlockController.I.setBlockEnable(xIndex, yIndex, false);
                     //SoundManager.I.PlaySound("src/sound/Jump.wav");
                 } else

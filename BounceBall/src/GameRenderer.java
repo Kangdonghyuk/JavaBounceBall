@@ -1,5 +1,7 @@
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 interface ObjectRenderer {
@@ -8,9 +10,13 @@ interface ObjectRenderer {
 
 class GameRenderer extends JPanel
 {
+    public static GameRenderer I;
     private ArrayList<ObjectRenderer> rendererList;
+    BufferedImage backgroundImage;
 
     public GameRenderer() {
+        I = this;
+
         rendererList = new ArrayList<>();
 
         JFrame my_frame = new JFrame();
@@ -21,6 +27,8 @@ class GameRenderer extends JPanel
 
         my_frame.addKeyListener(new KeyManager());
         my_frame.setVisible(true);
+
+        backgroundImage = FileManager.I.getImage("src/image/background.jpg");
     }
 
     public void addRenderer(ObjectRenderer renderer) {
@@ -30,6 +38,10 @@ class GameRenderer extends JPanel
     public void paintComponent(Graphics g) {
         int index;
 
+        g.drawImage(backgroundImage,
+                0, 0,
+                Information.I.screenWidth, Information.I.screenHeight,
+                this);
         for(index = 0; index < rendererList.size(); index++) {
             rendererList.get(index).paint(g);
         }

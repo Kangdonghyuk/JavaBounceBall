@@ -11,7 +11,7 @@ class KeyManager implements KeyListener{
     }
     public void keyPressed(KeyEvent e) {
         if(e.getKeyCode() == 38) {
-            //System.out.println("Up pressed");
+            GameManager.I.readStage(3);
         }
         if(e.getKeyCode() == RIGHT) {
             //System.out.println("Right pressed");

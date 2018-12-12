@@ -1,34 +1,37 @@
 
 public class Main{
+    public static Main I;
+    private static String sceneName;
+
+    public Main() {
+        I = this;
+    }
 
     public static void main(String[] args) {
+        sceneName = "Menu";
+
         Information information = new Information();
         information.setScreenSize(1200, 740);
+        information.setBlockSize(40);
         information.setContainerSize(1200, 700);
-        information.setMaxIndex(60, 36);
 
         //SoundManager soundManager = new SoundManager();
         //soundManager.I.PlaySound("src/sound/GameBGM.wav");
 
-        //Container container = new Container(
-          //      information.containerWidth, information.containerHeight);
+        new FileManager();
 
-        //ContainerWriter containerWriter = new ContainerWriter(container);
+        setScene("Game");
+        //GameManager.I.enterGame();
+        //GameManager.I.gameLoop();
+    }
 
-        FileManager fileManager = new FileManager();
-        fileManager.readStage(1);
+    public static void setScene(String scene) {
+        sceneName = scene;
 
-        Ball ball = new Ball(200, 50, 8);
-
-        BlockController blockController = new BlockController();
-        blockController.setMap(fileManager.getMap());
-
-        GameRenderer gRenderer = new GameRenderer();
-        gRenderer.addRenderer(new BlockRenderer());
-        gRenderer.addRenderer(new BallRenderer(ball));
-
-        GameManager gameManager = new GameManager(ball, gRenderer);
-
-        gameManager.gameLoop();
+        if(sceneName == "Game") {
+            new GameManager();
+            GameManager.I.enterGame();
+            GameManager.I.gameLoop();
+        }
     }
 }

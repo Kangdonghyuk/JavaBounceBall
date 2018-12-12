@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.awt.image.BufferedImage;
 
 class Block {
     private final int size = 20;
@@ -70,13 +71,14 @@ class BlockController {
         I = this;
 
         int yIndex, xIndex;
+        int blockSize = Information.I.blockSize;
 
         blocks = new Block[Information.I.yMaxIndex][];
         for(yIndex = 0; yIndex < Information.I.yMaxIndex; yIndex++) {
             blocks[yIndex] = new Block[Information.I.xMaxIndex];
             for(xIndex = 0; xIndex < Information.I.xMaxIndex; xIndex++) {
                 blocks[yIndex][xIndex] = new Block(
-                        xIndex * 20, (yIndex+0) * 20,
+                        xIndex * blockSize, yIndex * blockSize,
                         xIndex, yIndex, false);
             }
         }
@@ -111,24 +113,36 @@ class BlockController {
 }
 
 class BlockRenderer implements ObjectRenderer {
+    private BufferedImage[] blockImage;
+
     public BlockRenderer() {
+        blockImage = new BufferedImage[10];
+        blockImage[1] = FileManager.I.getImage("src/image/normal.png");
+        blockImage[2] = FileManager.I.getImage("src/image/cloud.png");
+        blockImage[3] = FileManager.I.getImage("src/image/superjump.png");
+        blockImage[4] = FileManager.I.getImage("src/image/dead.png");
+        blockImage[9] = FileManager.I.getImage("src/image/star.png");
     }
 
     public void paint(Graphics g) {
         int yIndex, xIndex;
+        int blockSize = Information.I.blockSize;
 
         for(yIndex = 0; yIndex < Information.I.yMaxIndex; yIndex++) {
             for (xIndex = 0; xIndex < Information.I.xMaxIndex; xIndex++) {
                 if(BlockController.I.isBlockEnable(xIndex, yIndex)) {
                     Block block = BlockController.I.getBlock(xIndex, yIndex);
-                    g.setColor(block.getColor());
+                    g.drawImage(blockImage[block.getType()],
+                            block.getXPosition(), block.getYPosition(),
+                            blockSize, blockSize, GameRenderer.I);
+                    /*g.setColor(block.getColor());
                     g.fillRect(
                             block.getXPosition(), block.getYPosition(),
-                            20, 20);
+                            20, 20);*/
                     g.setColor(Color.black);
                     g.drawRect(
                             block.getXPosition(), block.getYPosition(),
-                            20, 20);
+                            blockSize, blockSize);
                 }
             }
         }

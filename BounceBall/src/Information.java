@@ -4,6 +4,7 @@ class Information {
     public int screenHeight, screenWidth;
     public int containerHeight, containerWidth;
     public int yMaxIndex, xMaxIndex;
+    public int blockSize;
 
     public Information() {
         I = this;
@@ -16,10 +17,11 @@ class Information {
     public void setContainerSize(int width, int height) {
         containerHeight = height;
         containerWidth = width;
+        xMaxIndex = containerWidth / blockSize;
+        yMaxIndex = (containerHeight / blockSize) + 1;
     }
-    public void setMaxIndex(int xMaxIndex, int yMaxIndex) {
-        this.xMaxIndex = xMaxIndex;
-        this.yMaxIndex = yMaxIndex;
+    public void setBlockSize(int blockSize) {
+        this.blockSize = blockSize;
     }
     public boolean isValidXIndex(int xIndex) {
         return xIndex >= 0 && xIndex < xMaxIndex;
