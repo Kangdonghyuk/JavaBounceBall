@@ -5,6 +5,7 @@ class Ball
 {
     public static Ball I;
     private int xPosition, yPosition, radius;
+    private int saveXPosition, saveYPosition;
     private int xVelocity = 0;
     private int yVelocity = 2;
 
@@ -15,6 +16,8 @@ class Ball
         this.xPosition=xPosition;
         this.yPosition=yPosition;
         this.radius=radius;
+        saveXPosition = xPosition;
+        saveYPosition = yPosition;
         xVelocity = 0;
         yVelocity = 0;
     }
@@ -37,10 +40,10 @@ class Ball
     //basic move
     public void move(int deltaTime) {
         int yIndex, xIndex;
-        int saveXPosition = xPosition;
         int blockSize = Information.I.blockSize;
         int blockType;
 
+        saveXPosition = xPosition;
         xPosition = xPosition + xVelocity * deltaTime;
 
         xIndex = xPosition / blockSize;
@@ -53,6 +56,8 @@ class Ball
                     BlockController.I.setBlockEnable(xIndex, yIndex, false);
                     GameManager.I.discountStar();
                 }
+                else if(blockType == 5)
+                    GameManager.I.readStage(GameManager.I.getStage());
                 else {
                     xVelocity = -xVelocity;
                     xPosition = saveXPosition + xVelocity * deltaTime;
@@ -67,10 +72,10 @@ class Ball
 
     public void gravity(int deltaTime) {
         int yIndex, xIndex;
-        int saveYPosition = yPosition;
         int blockSize = Information.I.blockSize;
         int blockType;
 
+        saveYPosition = yPosition;
         yPosition = yPosition + yVelocity * deltaTime;
 
         xIndex = xPosition / blockSize;
@@ -83,13 +88,22 @@ class Ball
                     BlockController.I.setBlockEnable(xIndex, yIndex, false);
                     GameManager.I.discountStar();
                 }
+                else if(blockType == 5)
+                    GameManager.I.readStage(GameManager.I.getStage());
                 else if (yVelocity >= 0) {
                     yVelocity = -14;
 
-                    if(blockType == 2)
+                    if(blockType == 2) {
                         BlockController.I.setBlockEnable(xIndex, yIndex, false);
+                        GameRenderer.I.addRenderer(new AnimationRenderer(
+                                "cloudDestroy", 5, 50,
+                                xIndex * blockSize, yIndex * blockSize,
+                                blockSize, blockSize, false));
+                    }
                     else if(blockType == 3)
                         yVelocity = -18;
+                    else if(blockType == 4)
+                        GameManager.I.readStage(GameManager.I.getStage());
                     //BlockController.I.setBlockEnable(xIndex, yIndex, false);
                     //SoundManager.I.PlaySound("src/sound/Jump.wav");
                 } else
@@ -103,7 +117,7 @@ class Ball
     }
 }
 
-class BallRenderer implements ObjectRenderer
+class BallRenderer extends ObjectRenderer
 {
     private Ball ball;
     private Color color;
@@ -114,7 +128,9 @@ class BallRenderer implements ObjectRenderer
         this.color = Color.red;
         ballImage = FileManager.I.getImage("src/image/ball.png");
     }
-
+    public boolean isEnable() {
+        return false;
+    }
     public void paint(Graphics g) {
         int blockSize = Information.I.blockSize - 10;
         int radius = ball.getRadius();

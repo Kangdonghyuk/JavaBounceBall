@@ -110,7 +110,7 @@ class BlockController {
     }
 }
 
-class BlockRenderer implements ObjectRenderer {
+class BlockRenderer extends ObjectRenderer {
     private BufferedImage[] blockImage;
 
     public BlockRenderer() {
@@ -119,9 +119,13 @@ class BlockRenderer implements ObjectRenderer {
         blockImage[2] = FileManager.I.getImage("src/image/cloud.png");
         blockImage[3] = FileManager.I.getImage("src/image/superjump.png");
         blockImage[4] = FileManager.I.getImage("src/image/dead.png");
+        blockImage[5] = FileManager.I.getImage("src/image/boom.png");
+        blockImage[6] = FileManager.I.getImage("src/image/blank.png");
         blockImage[9] = FileManager.I.getImage("src/image/star.png");
     }
-
+    public boolean isEnable() {
+        return false;
+    }
     public void paint(Graphics g) {
         int yIndex, xIndex;
         int blockSize = Information.I.blockSize;
