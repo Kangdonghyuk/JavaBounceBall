@@ -88,10 +88,8 @@ class BlockController {
 
         for(yIndex = 0; yIndex < Information.I.yMaxIndex; yIndex++) {
             for (xIndex = 0; xIndex < Information.I.xMaxIndex; xIndex++) {
-                if(map[yIndex][xIndex] != 0) {
-                    blocks[yIndex][xIndex].setType(map[yIndex][xIndex]);
-                    blocks[yIndex][xIndex].setEnable(true);
-                }
+                blocks[yIndex][xIndex].setType(map[yIndex][xIndex]);
+                blocks[yIndex][xIndex].setEnable(map[yIndex][xIndex] != 0);
             }
         }
     }
@@ -138,11 +136,11 @@ class BlockRenderer implements ObjectRenderer {
                     /*g.setColor(block.getColor());
                     g.fillRect(
                             block.getXPosition(), block.getYPosition(),
-                            20, 20);*/
+                            20, 20);
                     g.setColor(Color.black);
                     g.drawRect(
                             block.getXPosition(), block.getYPosition(),
-                            blockSize, blockSize);
+                            blockSize, blockSize);*/
                 }
             }
         }

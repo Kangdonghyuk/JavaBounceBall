@@ -26,7 +26,9 @@ class FileManager {
         }
     }
 
-    public void readStage(int stage) {
+    public int readStage(int stage) {
+        int starCount = 0;
+
         String fileName = "src" + File.separator+"stage" +
                 File.separator + "stage" + stage + ".txt";
 
@@ -49,12 +51,14 @@ class FileManager {
 
             while((readChar = fileReader.read()) != -1) {
                 if(readChar >= 48 && readChar <= 58) {
-                    map[index / xMaxIndex][index % xMaxIndex] = readChar-48;
+                    map[index / xMaxIndex][index % xMaxIndex] = readChar - 48;
                     if(readChar-48 == 8) {
                         startXPosition = index % xMaxIndex * blockSize;
                         startYPosition = index / xMaxIndex * blockSize;
                         map[index / xMaxIndex][index % xMaxIndex] = 0;
                     }
+                    if(readChar - 48 == 9)
+                        starCount += 1;
                     index++;
                 }
             }
@@ -65,6 +69,7 @@ class FileManager {
         } catch (IOException e) {
             System.out.println("error");
         }
+        return starCount;
     }
 
     public int[][] getMap() {

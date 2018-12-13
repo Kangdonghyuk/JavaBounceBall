@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.awt.image.BufferedImage;
 
 class Ball
 {
@@ -14,6 +15,8 @@ class Ball
         this.xPosition=xPosition;
         this.yPosition=yPosition;
         this.radius=radius;
+        xVelocity = 0;
+        yVelocity = 0;
     }
     public int getXPosition() {
         return xPosition;
@@ -46,8 +49,10 @@ class Ball
         if(Information.I.isValidIndex(xIndex, yIndex)) {
             if (BlockController.I.isBlockEnable(xIndex, yIndex)) {
                 blockType = BlockController.I.getBlockType(xIndex, yIndex);
-                if(blockType == 9)
+                if(blockType == 9) {
                     BlockController.I.setBlockEnable(xIndex, yIndex, false);
+                    GameManager.I.discountStar();
+                }
                 else {
                     xVelocity = -xVelocity;
                     xPosition = saveXPosition + xVelocity * deltaTime;
@@ -74,8 +79,10 @@ class Ball
         if(Information.I.isValidIndex(xIndex, yIndex)) {
             if (BlockController.I.isBlockEnable(xIndex, yIndex)) {
                 blockType = BlockController.I.getBlockType(xIndex, yIndex);
-                if(blockType == 9)
+                if(blockType == 9) {
                     BlockController.I.setBlockEnable(xIndex, yIndex, false);
+                    GameManager.I.discountStar();
+                }
                 else if (yVelocity >= 0) {
                     yVelocity = -14;
 
@@ -100,16 +107,24 @@ class BallRenderer implements ObjectRenderer
 {
     private Ball ball;
     private Color color;
+    private BufferedImage ballImage;
 
     public BallRenderer(Ball ball) {
         this.ball = ball;
         this.color = Color.red;
+        ballImage = FileManager.I.getImage("src/image/ball.png");
     }
 
     public void paint(Graphics g) {
-        g.setColor(color);
+        int blockSize = Information.I.blockSize - 10;
         int radius = ball.getRadius();
+
+        g.drawImage(
+                ballImage,
+                ball.getXPosition() - radius + 7, ball.getYPosition() - radius,
+                blockSize, blockSize, GameRenderer.I);
+        /*g.setColor(color);
         g.fillOval(ball.getXPosition() - radius,
-                ball.getYPosition() - radius, radius * 2, radius * 2);
+                ball.getYPosition() - radius, radius * 2, radius * 2);*/
     }
 }
