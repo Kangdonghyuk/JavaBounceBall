@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="CUSTOM_SCOPE_NAME" value="All Places" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b72a3e25-2236-4d34-9ad1-b92cd31a514d" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -14,18 +17,15 @@
     <SUITE FILE_PATH="coverage/BounceBall$Main.coverage" NAME="Main Coverage Results" MODIFIED="1544622399377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.5390814">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="GameManager.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/GameManager.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="489">
-                  <caret line="47" column="39" lean-forward="true" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
-                  <folding>
-                    <element signature="e#1818#1819#0" expanded="true" />
-                    <element signature="e#1850#1851#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="201">
+                  <caret line="92" column="44" lean-forward="true" selection-start-line="92" selection-start-column="44" selection-end-line="92" selection-end-column="44" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -33,12 +33,10 @@
           <file leaf-file-name="AnimationRenderer.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/AnimationRenderer.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+                <state relative-caret-position="390">
+                  <caret line="29" column="22" lean-forward="false" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#1743#1744#0" expanded="true" />
-                    <element signature="e#1774#1775#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -47,7 +45,7 @@
           <file leaf-file-name="FileManager.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/FileManager.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-38">
+                <state relative-caret-position="345">
                   <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -56,25 +54,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Ball.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Ball.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="122">
-                  <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#4234#4235#0" expanded="true" />
-                    <element signature="e#4262#4263#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="KeyManager.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/KeyManager.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="341">
-                  <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+                <state relative-caret-position="285">
+                  <caret line="20" column="36" lean-forward="false" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -100,29 +84,41 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="GameRenderer.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/GameRenderer.java">
+          <file leaf-file-name="Ball.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Ball.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="339">
-                  <caret line="53" column="18" lean-forward="true" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+                <state relative-caret-position="90">
+                  <caret line="70" column="54" lean-forward="true" selection-start-line="70" selection-start-column="54" selection-end-line="70" selection-end-column="54" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#290#291#0" expanded="true" />
-                    <element signature="e#318#319#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Block.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/Block.java">
+          <file leaf-file-name="GameRenderer.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/GameRenderer.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="332">
-                  <caret line="124" column="5" lean-forward="true" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
+                <state relative-caret-position="189">
+                  <caret line="46" column="45" lean-forward="false" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#3847#3848#0" expanded="true" />
-                    <element signature="e#3875#3876#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Block.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Block.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="405">
+                  <caret line="46" column="1" lean-forward="false" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#628#629#0" expanded="true" />
+                    <element signature="e#660#661#0" expanded="true" />
+                    <element signature="e#3354#3355#0" expanded="true" />
+                    <element signature="e#3382#3383#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -131,21 +127,22 @@
           <file leaf-file-name="SoundManager.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/SoundManager.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+                <state relative-caret-position="150">
+                  <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
                   <folding>
-                    <marker date="1544630346000" expanded="false" signature="228:239" ph=" { " />
-                    <marker date="1544630346000" expanded="false" signature="248:254" ph=" }" />
+                    <element signature="imports" expanded="true" />
+                    <marker date="1544795362000" expanded="false" signature="226:237" ph=" { " />
+                    <marker date="1544795362000" expanded="false" signature="246:252" ph=" }" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="345">
-                  <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+                <state relative-caret-position="315">
+                  <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
                   <folding />
                 </state>
               </provider>
@@ -174,15 +171,15 @@
         <option value="$PROJECT_DIR$/src/Writer.java" />
         <option value="$PROJECT_DIR$/src/Controller.java" />
         <option value="$PROJECT_DIR$/src/Container.java" />
-        <option value="$PROJECT_DIR$/src/SoundManager.java" />
         <option value="$PROJECT_DIR$/src/Information.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/FileManager.java" />
+        <option value="$PROJECT_DIR$/src/GameRenderer.java" />
         <option value="$PROJECT_DIR$/src/AnimationRenderer.java" />
         <option value="$PROJECT_DIR$/src/KeyManager.java" />
-        <option value="$PROJECT_DIR$/src/GameRenderer.java" />
-        <option value="$PROJECT_DIR$/src/Ball.java" />
         <option value="$PROJECT_DIR$/src/Block.java" />
+        <option value="$PROJECT_DIR$/src/SoundManager.java" />
+        <option value="$PROJECT_DIR$/src/Ball.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/GameManager.java" />
       </list>
     </option>
@@ -212,9 +209,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -222,22 +217,13 @@
               <item name="BounceBall" type="b2602c69:ProjectViewProjectNode" />
               <item name="BounceBall" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="BounceBall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BounceBall" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BounceBall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BounceBall" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Block.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -310,12 +296,14 @@
       <workItem from="1544539966490" duration="13356000" />
       <workItem from="1544620456611" duration="9863000" />
       <workItem from="1544632707211" duration="6588000" />
-      <workItem from="1544690393365" duration="14593000" />
+      <workItem from="1544690393365" duration="15257000" />
+      <workItem from="1544727624772" duration="8487000" />
+      <workItem from="1544795316224" duration="665000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54609000" />
+    <option name="totallyTimeSpent" value="64425000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -345,6 +333,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -394,18 +383,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/GameRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#290#291#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/KeyManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -434,8 +411,6 @@
           <caret line="40" column="38" lean-forward="true" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4234#4235#0" expanded="true" />
-            <element signature="e#4262#4263#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -446,8 +421,10 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3847#3848#0" expanded="true" />
-            <element signature="e#3875#3876#0" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+            <element signature="e#3354#3355#0" expanded="true" />
+            <element signature="e#3382#3383#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -457,8 +434,9 @@
         <state relative-caret-position="135">
           <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
           <folding>
-            <marker date="1544630346000" expanded="false" signature="228:239" ph=" { " />
-            <marker date="1544630346000" expanded="false" signature="248:254" ph=" }" />
+            <element signature="imports" expanded="true" />
+            <marker date="1544795362000" expanded="false" signature="226:237" ph=" { " />
+            <marker date="1544795362000" expanded="false" signature="246:252" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -475,10 +453,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
           <caret line="44" column="23" lean-forward="false" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
-          <folding>
-            <element signature="e#1818#1819#0" expanded="true" />
-            <element signature="e#1850#1851#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -498,8 +473,6 @@
           <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4234#4235#0" expanded="true" />
-            <element signature="e#4262#4263#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -510,8 +483,6 @@
           <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#290#291#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -544,8 +515,10 @@
           <caret line="136" column="66" lean-forward="true" selection-start-line="134" selection-start-column="20" selection-end-line="136" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3847#3848#0" expanded="true" />
-            <element signature="e#3875#3876#0" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+            <element signature="e#3354#3355#0" expanded="true" />
+            <element signature="e#3382#3383#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -555,8 +528,9 @@
         <state relative-caret-position="135">
           <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
           <folding>
-            <marker date="1544630346000" expanded="false" signature="228:239" ph=" { " />
-            <marker date="1544630346000" expanded="false" signature="248:254" ph=" }" />
+            <element signature="imports" expanded="true" />
+            <marker date="1544795362000" expanded="false" signature="226:237" ph=" { " />
+            <marker date="1544795362000" expanded="false" signature="246:252" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -575,8 +549,10 @@
           <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3847#3848#0" expanded="true" />
-            <element signature="e#3875#3876#0" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+            <element signature="e#3354#3355#0" expanded="true" />
+            <element signature="e#3382#3383#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -585,10 +561,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-          <folding>
-            <element signature="e#1818#1819#0" expanded="true" />
-            <element signature="e#1850#1851#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -621,8 +594,6 @@
           <caret line="48" column="32" lean-forward="true" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4234#4235#0" expanded="true" />
-            <element signature="e#4262#4263#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -633,8 +604,6 @@
           <caret line="16" column="44" lean-forward="true" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#290#291#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -664,8 +633,6 @@
           <caret line="50" column="38" lean-forward="false" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4234#4235#0" expanded="true" />
-            <element signature="e#4262#4263#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -686,8 +653,10 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3847#3848#0" expanded="true" />
-            <element signature="e#3875#3876#0" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+            <element signature="e#3354#3355#0" expanded="true" />
+            <element signature="e#3382#3383#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -709,8 +678,6 @@
           <caret line="50" column="38" lean-forward="true" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4234#4235#0" expanded="true" />
-            <element signature="e#4262#4263#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -731,25 +698,16 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3847#3848#0" expanded="true" />
-            <element signature="e#3875#3876#0" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+            <element signature="e#3354#3355#0" expanded="true" />
+            <element signature="e#3382#3383#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Writer.java" />
     <entry file="file://$PROJECT_DIR$/src/Controller.java" />
-    <entry file="file://$PROJECT_DIR$/src/SoundManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-          <folding>
-            <marker date="1544630346000" expanded="false" signature="228:239" ph=" { " />
-            <marker date="1544630346000" expanded="false" signature="248:254" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Container.java" />
     <entry file="file://$PROJECT_DIR$/src/Information.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -763,30 +721,367 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/FileManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AnimationRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1743#1744#0" expanded="true" />
-            <element signature="e#1774#1775#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/KeyManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+        <state relative-caret-position="285">
+          <caret line="20" column="36" lean-forward="false" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Block.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="46" column="1" lean-forward="false" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+            <element signature="e#3354#3355#0" expanded="true" />
+            <element signature="e#3382#3383#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AnimationRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="29" column="22" lean-forward="false" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="0.0" y="831.0">com</node>
+            <node x="784.068137254902" y="218.0">Ball</node>
+            <node x="0.0" y="683.0">netscape</node>
+            <node x="405.82249455337706" y="456.0">GameManager</node>
+            <node x="188.0" y="683.0">sound</node>
+            <node x="0.0" y="609.0">toolbarButtonGraphics</node>
+            <node x="209.0010893246187" y="0.0">Information</node>
+            <node x="314.0" y="831.0">sun</node>
+            <node x="459.89275599128536" y="307.0">AnimationRenderer</node>
+            <node x="334.0" y="757.0">apple</node>
+            <node x="158.0" y="831.0">java</node>
+            <node x="499.0" y="757.0">javax</node>
+            <node x="528.0" y="683.0">javafx</node>
+            <node x="279.00108932461865" y="99.0">KeyManager</node>
+            <node x="0.0" y="757.0">image</node>
+            <node x="359.0" y="683.0">oracle</node>
+            <node x="469.0" y="831.0">org</node>
+            <node x="424.00108932461865" y="99.0">ObjectRenderer</node>
+            <node x="47.5" y="307.0">BlockController</node>
+            <node x="689.068137254902" y="307.0">BallRenderer</node>
+            <node x="468.0" y="609.0">resources</node>
+            <node x="587.0010893246186" y="99.0">FileManager</node>
+            <node x="259.9510893246187" y="307.0">BlockRenderer</node>
+            <node x="274.0" y="609.0">META-INF</node>
+            <node x="622.0" y="831.0">jdk</node>
+            <node x="168.0" y="757.0">stage</node>
+            <node x="378.55108932461866" y="218.0">GameRenderer</node>
+            <node x="124.13858932461869" y="218.0">Block</node>
+            <node x="401.32249455337706" y="535.0">Main</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="GameManager" target="Ball">
+              <point x="63.75" y="-14.5" />
+              <point x="537.572494553377" y="436.0" />
+              <point x="841.568137254902" y="436.0" />
+              <point x="841.568137254902" y="287.0" />
+              <point x="847.068137254902" y="287.0" />
+              <point x="28.0" y="14.5" />
+            </edge>
+            <edge source="GameManager" target="AnimationRenderer">
+              <point x="12.75" y="-14.5" />
+              <point x="486.57249455337706" y="376.0" />
+              <point x="501.14275599128536" y="376.0" />
+              <point x="-41.25" y="14.5" />
+            </edge>
+            <edge source="Ball" target="Information">
+              <point x="0.0" y="-14.5" />
+              <point x="819.068137254902" y="49.0" />
+              <point x="321.3899782135076" y="49.0" />
+              <point x="52.888888888888914" y="14.5" />
+            </edge>
+            <edge source="BallRenderer" target="GameRenderer">
+              <point x="-52.08333333333337" y="-14.5" />
+              <point x="699.4848039215685" y="277.0" />
+              <point x="502.75108932461865" y="277.0" />
+              <point x="55.19999999999999" y="14.5" />
+            </edge>
+            <edge source="BlockRenderer" target="Information">
+              <point x="-27.399999999999977" y="-14.5" />
+              <point x="301.0510893246187" y="267.0" />
+              <point x="268.5010893246187" y="267.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="BallRenderer" target="ObjectRenderer">
+              <point x="-31.25" y="-14.5" />
+              <point x="720.318137254902" y="287.0" />
+              <point x="704.584422657952" y="287.0" />
+              <point x="704.584422657952" y="168.0" />
+              <point x="552.7010893246186" y="168.0" />
+              <point x="57.19999999999993" y="14.5" />
+            </edge>
+            <edge source="KeyManager" target="GameManager">
+              <point x="-31.0" y="14.5" />
+              <point x="310.00108932461865" y="198.0" />
+              <point x="230.11250000000004" y="198.0" />
+              <point x="230.11250000000004" y="396.0" />
+              <point x="444.07249455337706" y="396.0" />
+              <point x="-29.75" y="-14.5" />
+            </edge>
+            <edge source="AnimationRenderer" target="GameManager">
+              <point x="41.25" y="14.5" />
+              <point x="583.6427559912854" y="386.0" />
+              <point x="495.07249455337706" y="386.0" />
+              <point x="21.25" y="-14.5" />
+            </edge>
+            <edge source="BlockRenderer" target="Block">
+              <point x="-54.80000000000001" y="-14.5" />
+              <point x="273.6510893246186" y="277.0" />
+              <point x="197.9385893246187" y="277.0" />
+              <point x="32.80000000000001" y="14.5" />
+            </edge>
+            <edge source="GameManager" target="BlockRenderer">
+              <point x="-21.25" y="-14.5" />
+              <point x="452.57249455337706" y="386.0" />
+              <point x="294.2010893246187" y="386.0" />
+              <point x="-34.25" y="14.5" />
+            </edge>
+            <edge source="GameManager" target="FileManager">
+              <point x="29.75" y="-14.5" />
+              <point x="503.57249455337706" y="396.0" />
+              <point x="653.0010893246186" y="396.0" />
+              <point x="653.0010893246186" y="198.0" />
+              <point x="657.584422657952" y="198.0" />
+              <point x="10.083333333333371" y="14.5" />
+            </edge>
+            <edge source="GameManager" target="Information">
+              <point x="-63.75" y="-14.5" />
+              <point x="410.07249455337706" y="436.0" />
+              <point x="37.0" y="436.0" />
+              <point x="37.0" y="69.0" />
+              <point x="242.05664488017425" y="69.0" />
+              <point x="-26.444444444444457" y="14.5" />
+            </edge>
+            <edge source="GameRenderer" target="KeyManager">
+              <point x="-55.19999999999999" y="-14.5" />
+              <point x="392.35108932461867" y="168.0" />
+              <point x="372.00108932461865" y="168.0" />
+              <point x="31.0" y="14.5" />
+            </edge>
+            <edge source="BallRenderer" target="Ball">
+              <point x="31.25" y="-14.5" />
+              <point x="782.818137254902" y="287.0" />
+              <point x="791.068137254902" y="287.0" />
+              <point x="-28.0" y="14.5" />
+            </edge>
+            <edge source="AnimationRenderer" target="ObjectRenderer">
+              <point x="0.0" y="-14.5" />
+              <point x="542.3927559912854" y="287.0" />
+              <point x="564.3927559912854" y="287.0" />
+              <point x="564.3927559912854" y="178.0" />
+              <point x="524.1010893246187" y="178.0" />
+              <point x="28.600000000000023" y="14.5" />
+            </edge>
+            <edge source="BlockRenderer" target="GameManager">
+              <point x="34.25" y="14.5" />
+              <point x="362.7010893246187" y="376.0" />
+              <point x="461.07249455337706" y="376.0" />
+              <point x="-12.75" y="-14.5" />
+            </edge>
+            <edge source="BlockRenderer" target="GameRenderer">
+              <point x="54.80000000000001" y="-14.5" />
+              <point x="383.25108932461865" y="287.0" />
+              <point x="392.35108932461867" y="287.0" />
+              <point x="-55.19999999999999" y="14.5" />
+            </edge>
+            <edge source="GameRenderer" target="FileManager">
+              <point x="55.19999999999999" y="-14.5" />
+              <point x="502.75108932461865" y="198.0" />
+              <point x="617.2510893246186" y="198.0" />
+              <point x="-30.25" y="14.5" />
+            </edge>
+            <edge source="AnimationRenderer" target="GameRenderer">
+              <point x="-55.0" y="-14.5" />
+              <point x="487.39275599128536" y="287.0" />
+              <point x="475.1510893246187" y="287.0" />
+              <point x="27.600000000000023" y="14.5" />
+            </edge>
+            <edge source="Main" target="GameManager">
+              <point x="0.0" y="-14.5" />
+              <point x="-34.0" y="14.5" />
+            </edge>
+            <edge source="GameManager" target="GameRenderer">
+              <point x="-4.25" y="-14.5" />
+              <point x="469.57249455337706" y="366.0" />
+              <point x="417.1510893246186" y="366.0" />
+              <point x="417.1510893246186" y="287.0" />
+              <point x="419.95108932461864" y="287.0" />
+              <point x="-27.600000000000023" y="14.5" />
+            </edge>
+            <edge source="GameManager" target="BallRenderer">
+              <point x="38.25" y="-14.5" />
+              <point x="512.072494553377" y="406.0" />
+              <point x="751.568137254902" y="406.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="BallRenderer" target="FileManager">
+              <point x="-10.416666666666629" y="-14.5" />
+              <point x="741.1514705882353" y="287.0" />
+              <point x="726.2764705882353" y="287.0" />
+              <point x="726.2764705882353" y="158.0" />
+              <point x="677.7510893246186" y="158.0" />
+              <point x="30.25" y="14.5" />
+            </edge>
+            <edge source="BlockController" target="Block">
+              <point x="-17.875" y="-14.5" />
+              <point x="101.125" y="277.0" />
+              <point x="132.33858932461868" y="277.0" />
+              <point x="-32.80000000000001" y="14.5" />
+            </edge>
+            <edge source="GameManager" target="Block">
+              <point x="-38.25" y="-14.5" />
+              <point x="435.57249455337706" y="406.0" />
+              <point x="208.31250000000003" y="406.0" />
+              <point x="208.31250000000003" y="287.0" />
+              <point x="181.5385893246187" y="287.0" />
+              <point x="16.400000000000006" y="14.5" />
+            </edge>
+            <edge source="BallRenderer" target="Information">
+              <point x="10.416666666666629" y="-14.5" />
+              <point x="761.9848039215685" y="287.0" />
+              <point x="755.318137254902" y="287.0" />
+              <point x="755.318137254902" y="59.0" />
+              <point x="308.1677559912854" y="59.0" />
+              <point x="39.666666666666686" y="14.5" />
+            </edge>
+            <edge source="GameRenderer" target="ObjectRenderer">
+              <point x="0.0" y="-14.5" />
+              <point x="447.55108932461866" y="178.0" />
+              <point x="466.9010893246186" y="178.0" />
+              <point x="-28.600000000000023" y="14.5" />
+            </edge>
+            <edge source="BlockRenderer" target="ObjectRenderer">
+              <point x="0.0" y="-14.5" />
+              <point x="328.4510893246187" y="287.0" />
+              <point x="323.23082788671036" y="287.0" />
+              <point x="323.23082788671036" y="178.0" />
+              <point x="438.3010893246187" y="178.0" />
+              <point x="-57.19999999999999" y="14.5" />
+            </edge>
+            <edge source="GameRenderer" target="Information">
+              <point x="-27.600000000000023" y="-14.5" />
+              <point x="419.95108932461864" y="168.0" />
+              <point x="413.50108932461865" y="168.0" />
+              <point x="413.50108932461865" y="79.0" />
+              <point x="281.72331154684093" y="79.0" />
+              <point x="13.222222222222229" y="14.5" />
+            </edge>
+            <edge source="Ball" target="GameManager">
+              <point x="14.0" y="14.5" />
+              <point x="833.068137254902" y="426.0" />
+              <point x="529.072494553377" y="426.0" />
+              <point x="55.25" y="-14.5" />
+            </edge>
+            <edge source="Main" target="FileManager">
+              <point x="30.80000000000001" y="-14.5" />
+              <point x="470.622494553377" y="515.0" />
+              <point x="864.568137254902" y="515.0" />
+              <point x="864.568137254902" y="148.0" />
+              <point x="697.9177559912853" y="148.0" />
+              <point x="50.41666666666663" y="14.5" />
+            </edge>
+            <edge source="FileManager" target="Information">
+              <point x="0.0" y="-14.5" />
+              <point x="647.5010893246186" y="69.0" />
+              <point x="294.94553376906316" y="69.0" />
+              <point x="26.444444444444457" y="14.5" />
+            </edge>
+            <edge source="BlockRenderer" target="FileManager">
+              <point x="27.399999999999977" y="-14.5" />
+              <point x="355.85108932461867" y="287.0" />
+              <point x="340.5625" y="287.0" />
+              <point x="340.5625" y="188.0" />
+              <point x="597.084422657952" y="188.0" />
+              <point x="-50.41666666666663" y="14.5" />
+            </edge>
+            <edge source="AnimationRenderer" target="FileManager">
+              <point x="55.0" y="-14.5" />
+              <point x="597.3927559912854" y="287.0" />
+              <point x="627.9971132897605" y="287.0" />
+              <point x="627.9971132897605" y="198.0" />
+              <point x="637.4177559912853" y="198.0" />
+              <point x="-10.083333333333371" y="14.5" />
+            </edge>
+            <edge source="Main" target="Information">
+              <point x="-30.80000000000001" y="-14.5" />
+              <point x="409.022494553377" y="515.0" />
+              <point x="15.0" y="515.0" />
+              <point x="15.0" y="49.0" />
+              <point x="215.61220043572982" y="49.0" />
+              <point x="-52.888888888888886" y="14.5" />
+            </edge>
+            <edge source="BlockController" target="Information">
+              <point x="-53.625" y="-14.5" />
+              <point x="65.375" y="267.0" />
+              <point x="113.63858932461869" y="267.0" />
+              <point x="113.63858932461869" y="79.0" />
+              <point x="255.27886710239648" y="79.0" />
+              <point x="-13.222222222222229" y="14.5" />
+            </edge>
+            <edge source="GameManager" target="BlockController">
+              <point x="-55.25" y="-14.5" />
+              <point x="418.57249455337706" y="426.0" />
+              <point x="83.25" y="426.0" />
+              <point x="-35.75" y="14.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.9068181818181819" x="433.0" y="430.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SoundManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1544795362000" expanded="false" signature="226:237" ph=" { " />
+            <marker date="1544795362000" expanded="false" signature="246:252" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ball.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="70" column="54" lean-forward="true" selection-start-line="70" selection-start-column="54" selection-end-line="70" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -795,58 +1090,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GameRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="53" column="18" lean-forward="true" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#290#291#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FileManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-38">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="189">
+          <caret line="46" column="45" lean-forward="false" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ball.java">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4234#4235#0" expanded="true" />
-            <element signature="e#4262#4263#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="315">
+          <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GameManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="47" column="39" lean-forward="true" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
-          <folding>
-            <element signature="e#1818#1819#0" expanded="true" />
-            <element signature="e#1850#1851#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Block.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="124" column="5" lean-forward="true" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3847#3848#0" expanded="true" />
-            <element signature="e#3875#3876#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="201">
+          <caret line="92" column="44" lean-forward="true" selection-start-line="92" selection-start-column="44" selection-end-line="92" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -12,6 +12,7 @@ class GameManager {
     private int deltaTime, delayTime;
     private int stage;
     private int starCount;
+    private int blockSize;
 
     public int nowTime;
 
@@ -21,8 +22,9 @@ class GameManager {
         delayTime = 20;
         deltaTime = 1;
         nowTime = 0;
-        stage = 12;
+        stage = 1;
         isPlay = true;
+        blockSize = Information.I.blockSize;
     }
 
     public void clearGame() {
@@ -43,7 +45,7 @@ class GameManager {
         ball.setInformation(
                 FileManager.I.getStartXPosition(),
                 FileManager.I.getStartYPosition(),
-                20);
+                blockSize/2);
 
         gRenderer = new GameRenderer();
         gRenderer.addRenderer(new BlockRenderer());
@@ -60,7 +62,7 @@ class GameManager {
         ball.setInformation(
                 FileManager.I.getStartXPosition(),
                 FileManager.I.getStartYPosition(),
-                20);
+                blockSize/2);
         blockController.setMap(FileManager.I.getMap());
     }
     public int getStage() {
@@ -71,8 +73,49 @@ class GameManager {
         if(starCount == 0)
             readStage(stage + 1);
     }
-    public void CollideBlock(int xIndex, int yIndex) {
+    public void setBallXVelocity(int xVelocity) {
+        ball.setXVelocity(xVelocity);
+    }
+    public int getBallXVelocity() {
+        return ball.getXVelocity();
+    }
+    public int CollideBlock(int xIndex, int yIndex) {
+        int type = blockController.getBlockType(xIndex, yIndex);
 
+        if(blockController.isBlockEnable(xIndex, yIndex) == false)
+            type = 0;
+
+        switch(type) {
+            case 2:
+                if(ball.getYVelocity() >= 0)
+                    blockController.setBlockEnable(xIndex, yIndex, false);
+                    gRenderer.addRenderer(new AnimationRenderer(
+                            "cloudDestroy", 5, 50,
+                            xIndex * blockSize, yIndex * blockSize,
+                            blockSize, blockSize, false));
+                break;
+            case 3:
+                break;
+            case 4:
+                if(ball.getYVelocity() >= 0) {
+                    GameManager.I.readStage(GameManager.I.getStage());
+                    SoundManager.I.PlaySound("src/sound/GameOver.wav");
+                }
+                break;
+            case 5:
+                GameManager.I.readStage(GameManager.I.getStage());
+                SoundManager.I.PlaySound("src/sound/GameOver.wav");
+                break;
+            case 9:
+                blockController.setBlockEnable(xIndex, yIndex, false);
+                GameManager.I.discountStar();
+                break;
+        }
+
+        return type;
+    }
+    public Block getBlock(int xIndex, int yIndex) {
+        return blockController.getBlock(xIndex, yIndex);
     }
     public void pauseAndplay() {
         isPlay = !isPlay;

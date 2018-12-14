@@ -8,8 +8,6 @@ class Block {
     private int type;
     private boolean isEnable;
 
-    private Color color;
-
     public Block(int xPosition, int yPosition,
                  int xIndex, int yIndex, boolean isEnable) {
         this.xPosition = xPosition;
@@ -24,18 +22,6 @@ class Block {
     }
     public void setType(int type) {
         this.type = type;
-        if(type == 0)
-            color = Color.black;
-        else if(type == 1)
-            color = Color.yellow;
-        else if(type == 2)
-            color = Color.blue;
-        else if(type == 3)
-            color = Color.green;
-        else if(type == 4)
-            color = Color.gray;
-        else if(type == 5)
-            color = Color.pink;
     }
     public int getSize() {
         return size;
@@ -55,21 +41,15 @@ class Block {
     public int getType() {
         return type;
     }
-    public Color getColor() {
-        return color;
-    }
     public boolean isEnable() {
         return isEnable;
     }
 }
 
 class BlockController {
-    public static BlockController I;
     private Block[][] blocks;
 
     public BlockController() {
-        I = this;
-
         int yIndex, xIndex;
         int blockSize = Information.I.blockSize;
 
@@ -132,19 +112,11 @@ class BlockRenderer extends ObjectRenderer {
 
         for(yIndex = 0; yIndex < Information.I.yMaxIndex; yIndex++) {
             for (xIndex = 0; xIndex < Information.I.xMaxIndex; xIndex++) {
-                if(BlockController.I.isBlockEnable(xIndex, yIndex)) {
-                    Block block = BlockController.I.getBlock(xIndex, yIndex);
+                Block block = GameManager.I.getBlock(xIndex, yIndex);
+                if(block.isEnable()) {
                     g.drawImage(blockImage[block.getType()],
                             block.getXPosition(), block.getYPosition(),
                             blockSize, blockSize, GameRenderer.I);
-                    /*g.setColor(block.getColor());
-                    g.fillRect(
-                            block.getXPosition(), block.getYPosition(),
-                            20, 20);
-                    g.setColor(Color.black);
-                    g.drawRect(
-                            block.getXPosition(), block.getYPosition(),
-                            blockSize, blockSize);*/
                 }
             }
         }

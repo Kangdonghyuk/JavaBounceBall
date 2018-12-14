@@ -8,7 +8,6 @@ class AnimationRenderer extends ObjectRenderer {
     private int frame, frameSize, frameTime, nowTime;
     private int xPosition, yPosition;
     private int width, height;
-    private String fileName;
     private boolean isLoop, isLooped;
 
     public AnimationRenderer(String fileName, int frameSize, int frameTime,
@@ -16,7 +15,6 @@ class AnimationRenderer extends ObjectRenderer {
                              int width, int height, boolean isLoop) {
         int index;
 
-        this.fileName = fileName;
         this.frameSize = frameSize;
         this.frameTime = frameTime;
         this.xPosition = xPosition;

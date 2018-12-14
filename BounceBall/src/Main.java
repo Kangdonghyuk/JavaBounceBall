@@ -15,8 +15,8 @@ public class Main{
         information.setBlockSize(40);
         information.setContainerSize(1200, 700);
 
-        //SoundManager soundManager = new SoundManager();
-        //soundManager.I.PlaySound("src/sound/GameBGM.wav");
+        SoundManager soundManager = new SoundManager();
+        soundManager.I.PlaySound("src/sound/GameBGM.wav");
 
         new FileManager();
 
